@@ -35,27 +35,19 @@ EXAMPLE:
 
 from cpptopy import run_cpp
 
-
-
-from cpptopy import run_cpp
-
 A = run_cpp()
 
 n = input("Enter a number")
 
-a ='''
-#include <iostream>
+a =''' #include <iostream>
 
-int main()
-{
-int x =''' + n + ''';
+int main() { int x =''' + n + ''';
 
+std::cout << "The number is " <<''' + n + ''';
 
-std::cout << "The number is" <<''' + n + ''';
+} '''
 
-}
-    '''
-
-ans  = A.run(a)
+ans = A.run(a)
 
 print(ans)
+
